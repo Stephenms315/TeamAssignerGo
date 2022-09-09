@@ -8,7 +8,18 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello")
+	//----------Inputs---------
+	names := [5]string{"a", "b", "d", "e", "f"}
+	var grpSiz int = 2
+
+	fmt.Println(names)
+	fmt.Println(grpSiz)
+	fmt.Println("-------")
+	//----------Vars-----------
+	
+	//----------Spots----------
+	//----------Assigner-------
+
 }
 
 func readMemberList() []string {
