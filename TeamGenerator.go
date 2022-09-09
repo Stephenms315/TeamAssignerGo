@@ -9,6 +9,10 @@ import (
 
 func main() {
 	fmt.Println("Hello")
+	//----------Inputs---------
+	//----------Vars-----------
+	//----------Spots----------
+	//----------Assigner-------
 }
 
 func readMemberList() []string {
