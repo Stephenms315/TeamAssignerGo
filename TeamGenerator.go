@@ -8,7 +8,33 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello")
+	//----------Inputs---------
+	names := [5]string{"a", "b", "d", "e", "f"}
+	var grpSiz int = 2
+
+	fmt.Println(names)
+	fmt.Println(grpSiz)
+	fmt.Println("-------")
+	//----------Vars-----------
+	var numStu int = len(names)
+	var numGrp int = (numStu / grpSiz)
+	var grpRm int = numStu - (grpSiz * numGrp)
+
+	fmt.Println(numStu)
+	fmt.Println(numGrp)
+	fmt.Println(grpSiz)
+	fmt.Println(grpRm)
+	fmt.Println("-------")
+	//----------Spots----------
+	grpRang := makeRange(1, numGrp)
+	grpsL := []int{}
+
+	for i := 1; i < numGrp+1; i++ {
+		grpsL = append(grpsL, grpRang...)
+	}
+	fmt.Println(grpsL)
+	//----------Assigner-------
+
 }
 
 func readMemberList() []string {
@@ -29,6 +55,14 @@ func readMemberList() []string {
 	}
 
 	return students
+}
+
+func makeRange(min, max int) []int {
+	a := make([]int, max-min+1)
+	for i := range a {
+		a[i] = min + i
+	}
+	return a
 }
 
 func randomizeAndAssign() {}
